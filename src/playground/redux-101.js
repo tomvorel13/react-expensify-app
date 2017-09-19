@@ -1,24 +1,24 @@
-import { createStore } from 'redux';
+import { createStore } from "redux";
 
 //Action generators - functions that return action objects
 
 const incrementCount = ({ incrementBy = 1 } = {}) => ({
-    type: 'INCREMENT',
-    incrementBy
+  type: "INCREMENT",
+  incrementBy
 });
 
 const decrementCount = ({ decrementBy = 1 } = {}) => ({
-    type: 'DECREMENT',
-    decrementBy
+  type: "DECREMENT",
+  decrementBy
 });
 
 const setCount = ({ count }) => ({
-    type: 'SET',
-    count
+  type: "SET",
+  count
 });
 
 const resetCount = () => ({
-    type: 'RESET'
+  type: "RESET"
 });
 
 //Reducers
@@ -43,7 +43,7 @@ const countReducer = (state = { count: 0 }, action) => {
 const store = createStore(countReducer);
 
 const unsubscribe = store.subscribe(() => {
-    console.log(store.getState());
+  console.log(store.getState());
 });
 
 //Incrementing the count
@@ -52,7 +52,7 @@ const unsubscribe = store.subscribe(() => {
 //     incrementBy: 5
 // });
 
-store.dispatch(incrementCount({incrementBy: 5}));
+store.dispatch(incrementCount({ incrementBy: 5 }));
 
 store.dispatch(incrementCount());
 
@@ -61,5 +61,3 @@ store.dispatch(resetCount());
 store.dispatch(decrementCount());
 
 store.dispatch(setCount({ count: 101 }));
-
-

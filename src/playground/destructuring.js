@@ -38,8 +38,8 @@
 
 // console.log(`You are in ${city}, ${state}`);
 
-const item = ['Coffee (hot)', '$2.00', '$2.50', '$2.75'];
+const item = ["Coffee (hot)", "$2.00", "$2.50", "$2.75"];
 
-const [ itemName, , medium ] = item;
+const [itemName, , medium] = item;
 
-console.log(`A medium ${itemName} costs ${medium}`)
+console.log(`A medium ${itemName} costs ${medium}`);
